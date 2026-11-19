@@ -1,0 +1,12 @@
+paths:
+  dataset_root: data/samyukta
+  outputs: outputs
+dataset:
+  double_hand_path_hint: ""
+  group_regex: ""
+train:
+  img_size: 224
+  batch_size: 64
+  epochs_head: 3
+  epochs_finetune: 15
+  num_workers: 4

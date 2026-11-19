@@ -1,0 +1,118 @@
+{
+  "model_version": "samyukta_effnetb0_20261102-1107",
+  "created_at": "2026-11-02T11:17:03",
+  "classes": [
+    "Anjali",
+    "Berunda",
+    "Chakra",
+    "Garuda",
+    "Kapotham",
+    "Karkatta",
+    "Kartariswastika",
+    "Katakavardhana",
+    "Khatva",
+    "Kilaka",
+    "Kurma",
+    "Matsya",
+    "Nagabandha",
+    "Pasha",
+    "Pushpaputa",
+    "Sakata",
+    "Samputa",
+    "Shanka",
+    "Shivalinga",
+    "Swastikam",
+    "Varaha"
+  ],
+  "n_images": 13035,
+  "split": {
+    "train": 9123,
+    "val": 1956,
+    "test": 1956
+  },
+  "best_val_acc": 0.9974437627811861,
+  "test_acc": 0.9969325153374233,
+  "history": [
+    {
+      "phase": "head",
+      "epoch": 1,
+      "train_loss": 1.7873219059679992,
+      "train_acc": 0.7205962950783733,
+      "val_loss": 0.9449753834426038,
+      "val_acc": 0.9642126789366053
+    },
+    {
+      "phase": "head",
+      "epoch": 2,
+      "train_loss": 1.1374272650746182,
+      "train_acc": 0.8883042858708758,
+      "val_loss": 0.8603309953627167,
+      "val_acc": 0.9662576687116564
+    },
+    {
+      "phase": "head",
+      "epoch": 3,
+      "train_loss": 1.055286545254585,
+      "train_acc": 0.9080346377288173,
+      "val_loss": 0.8436727006986341,
+      "val_acc": 0.9708588957055214
+    },
+    {
+      "phase": "finetune",
+      "epoch": 1,
+      "train_loss": 0.7455293642877422,
+      "train_acc": 0.9800504220103037,
+      "val_loss": 0.6534745176389417,
+      "val_acc": 0.9959100204498977
+    },
+    {
+      "phase": "finetune",
+      "epoch": 2,
+      "train_loss": 0.6572037967924197,
+      "train_acc": 0.9968212210895538,
+      "val_loss": 0.6388293342600083,
+      "val_acc": 0.9959100204498977
+    },
+    {
+      "phase": "finetune",
+      "epoch": 3,
+      "train_loss": 0.6384617659941872,
+      "train_acc": 0.9982461909459608,
+      "val_loss": 0.6236295188131508,
+      "val_acc": 0.9974437627811861
+    },
+    {
+      "phase": "finetune",
+      "epoch": 4,
+      "train_loss": 0.6313127198920208,
+      "train_acc": 0.9981365778800833,
+      "val_loss": 0.6302983324464357,
+      "val_acc": 0.99079754601227
+    },
+    {
+      "phase": "finetune",
+      "epoch": 5,
+      "train_loss": 0.6281301397693454,
+      "train_acc": 0.9981365778800833,
+      "val_loss": 0.6197464193059379,
+      "val_acc": 0.9959100204498977
+    },
+    {
+      "phase": "finetune",
+      "epoch": 6,
+      "train_loss": 0.6214989739970708,
+      "train_acc": 0.9991230954729804,
+      "val_loss": 0.6193128925403447,
+      "val_acc": 0.9974437627811861
+    },
+    {
+      "phase": "finetune",
+      "epoch": 7,
+      "train_loss": 0.6189980948035372,
+      "train_acc": 0.998794256275348,
+      "val_loss": 0.6182669342661197,
+      "val_acc": 0.9964212678936605
+    }
+  ],
+  "dataset_license_note": "Bharatanatyam-Mudra-Dataset is CC-BY-SA-4.0: credit it and share derived data alike."
+}

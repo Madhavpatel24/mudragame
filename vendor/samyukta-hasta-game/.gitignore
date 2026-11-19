@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+venv*/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+data.zip
+hand_landmarker.task
+
+
+# Virtual environment and Python tooling
+.env
+.env.*
+*.env
+!.env.example
+!.env.*.example
+
+# Node.js
+node_modules/
+.next/
+out/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Generated model and evaluation files
+students/
+*.pt
+*.pth
+*.onnx
+
+# Downloaded or generated video/data archives
+data
+data.zip
+outputs.zip
+data/*.zip
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+
+# Logs and local caches
+*.log
+.cache/
+cache/
+tmp/
+temp/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Track outputs folder
+!outputs/
+!outputs/**

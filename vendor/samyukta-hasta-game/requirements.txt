@@ -1,0 +1,13 @@
+torch>=2.1
+torchvision>=0.16
+numpy
+pillow
+opencv-python
+mediapipe
+scikit-learn
+matplotlib
+pyyaml
+datasets      # only for `prepare-hf`
+fastapi
+uvicorn[standard]
+python-multipart

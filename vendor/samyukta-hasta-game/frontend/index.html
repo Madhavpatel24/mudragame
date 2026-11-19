@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samyukta Hasta · Live</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Samyukta Hasta <span>live classifier</span></h1>
+      <div id="status" class="status">connecting…</div>
+    </header>
+
+    <section class="stage">
+      <div class="video-wrap">
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="overlay"></canvas>
+      </div>
+
+      <aside class="panel">
+        <div class="prediction">
+          <div id="top1-label" class="prediction-label">—</div>
+          <div id="top1-conf" class="prediction-conf">—</div>
+        </div>
+        <div id="bars" class="bars"></div>
+        <div class="crop-wrap">
+          <div class="crop-title">what the model sees</div>
+          <img id="crop" alt="crop preview">
+        </div>
+        <dl class="stats">
+          <div><dt>latency</dt><dd id="stat-latency">—</dd></div>
+          <div><dt>fps</dt><dd id="stat-fps">—</dd></div>
+          <div><dt>hands</dt><dd id="stat-hands">—</dd></div>
+          <div><dt>crop</dt><dd id="stat-crop">—</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <footer>
+      <label>
+        <input type="checkbox" id="temporal" checked>
+        temporal smoothing (last 5 frames)
+      </label>
+      <label>
+        <input type="range" id="interval" min="80" max="600" step="20" value="200">
+        send every <span id="interval-value">200</span> ms
+      </label>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+{
+  "source_video": "reference/samyukta_hasta.mp4",
+  "video_duration": 187.67,
+  "method": "Measured from the video, not hard-coded: a mudra starts when its on-screen title fades in; it ends when the next title fades in (the new pose forms while the next title is showing). title_start/title_end are when that title text is visible.",
+  "warning": "The video is a screen recording of a YouTube page. From 181.4s YouTube end-screen cards (thumbnails containing people and hands) cover the picture, so the last mudra ends at 181.3s.",
+  "segments": [
+    {
+      "id": 1,
+      "name": "Angali",
+      "display": "Angali",
+      "meaning": "Salutation",
+      "start": 6.1,
+      "end": 15.5,
+      "title_start": 6.1,
+      "title_end": 12.9
+    },
+    {
+      "id": 2,
+      "name": "Kapotha",
+      "display": "Kapotha",
+      "meaning": "Casket / Pigeon",
+      "start": 15.5,
+      "end": 25.0,
+      "title_start": 15.5,
+      "title_end": 22.2
+    },
+    {
+      "id": 3,
+      "name": "Karkata",
+      "display": "Karkata",
+      "meaning": "Crab",
+      "start": 25.0,
+      "end": 31.4,
+      "title_start": 25.0,
+      "title_end": 28.7
+    },
+    {
+      "id": 4,
+      "name": "Swastika",
+      "display": "Swastika",
+      "meaning": "Cross",
+      "start": 31.4,
+      "end": 36.4,
+      "title_start": 31.4,
+      "title_end": 36.2
+    },
+    {
+      "id": 5,
+      "name": "Dola",
+      "display": "Dola",
+      "meaning": "Swing",
+      "start": 36.4,
+      "end": 46.4,
+      "title_start": 36.4,
+      "title_end": 43.8
+    },
+    {
+      "id": 6,
+      "name": "Pushpaputa",
+      "display": "Pushpaputa",
+      "meaning": "Holding flowers / Flower basket",
+      "start": 46.4,
+      "end": 52.7,
+      "title_start": 46.4,
+      "title_end": 53.0
+    },
+    {
+      "id": 7,
+      "name": "Utsanga",
+      "display": "Utsanga",
+      "meaning": "Embrace",
+      "start": 52.7,
+      "end": 59.6,
+      "title_start": 54.0,
+      "title_end": 59.0
+    },
+    {
+      "id": 8,
+      "name": "Shivalinga",
+      "display": "Shivalinga",
+      "meaning": "Lord Shiva",
+      "start": 60.2,
+      "end": 66.5,
+      "title_start": 61.6,
+      "title_end": 65.8
+    },
+    {
+      "id": 9,
+      "name": "Katakavardhana",
+      "display": "Katakavardhana",
+      "meaning": "Pair of bracelets / Blessing",
+      "start": 67.9,
+      "end": 76.5,
+      "title_start": 68.0,
+      "title_end": 73.0
+    },
+    {
+      "id": 10,
+      "name": "Kartareeswastika",
+      "display": "Kartareeswastika",
+      "meaning": "Scissors / Crossed arrow shafts",
+      "start": 76.5,
+      "end": 85.9,
+      "title_start": 76.5,
+      "title_end": 83.1
+    },
+    {
+      "id": 11,
+      "name": "Sakatam",
+      "display": "Sakatam",
+      "meaning": "Gestures describe demons",
+      "start": 85.9,
+      "end": 93.9,
+      "title_start": 85.9,
+      "title_end": 91.8
+    },
+    {
+      "id": 12,
+      "name": "Shankha",
+      "display": "Shankha",
+      "meaning": "Shell",
+      "start": 93.9,
+      "end": 102.3,
+      "title_start": 93.9,
+      "title_end": 99.5
+    },
+    {
+      "id": 13,
+      "name": "Chakra",
+      "display": "Chakra",
+      "meaning": "Wheel",
+      "start": 102.3,
+      "end": 108.7,
+      "title_start": 102.3,
+      "title_end": 106.7
+    },
+    {
+      "id": 14,
+      "name": "Samputa",
+      "display": "Samputa",
+      "meaning": "Hiding something / Container",
+      "start": 108.7,
+      "end": 118.0,
+      "title_start": 108.7,
+      "title_end": 114.9
+    },
+    {
+      "id": 15,
+      "name": "Paasha",
+      "display": "Paasha",
+      "meaning": "Rope",
+      "start": 118.0,
+      "end": 124.9,
+      "title_start": 118.0,
+      "title_end": 122.0
+    },
+    {
+      "id": 16,
+      "name": "Keelaka",
+      "display": "Keelaka",
+      "meaning": "Emotional bond",
+      "start": 124.9,
+      "end": 133.3,
+      "title_start": 124.9,
+      "title_end": 130.9
+    },
+    {
+      "id": 17,
+      "name": "Matsya",
+      "display": "Matsya",
+      "meaning": "Fish",
+      "start": 133.3,
+      "end": 140.1,
+      "title_start": 133.3,
+      "title_end": 137.8
+    },
+    {
+      "id": 18,
+      "name": "Koorma",
+      "display": "Koorma",
+      "meaning": "Tortoise",
+      "start": 140.1,
+      "end": 146.3,
+      "title_start": 140.1,
+      "title_end": 144.0
+    },
+    {
+      "id": 19,
+      "name": "Varaha",
+      "display": "Varaha",
+      "meaning": "Wild pig",
+      "start": 146.3,
+      "end": 154.8,
+      "title_start": 146.3,
+      "title_end": 152.7
+    },
+    {
+      "id": 20,
+      "name": "Garuda",
+      "display": "Garuda",
+      "meaning": "Mythological bird / Eagle",
+      "start": 154.8,
+      "end": 164.8,
+      "title_start": 154.8,
+      "title_end": 162.8
+    },
+    {
+      "id": 21,
+      "name": "Nagabandha",
+      "display": "Nagabandha",
+      "meaning": "Coiled Serpent",
+      "start": 164.8,
+      "end": 173.0,
+      "title_start": 164.8,
+      "title_end": 170.7
+    },
+    {
+      "id": 22,
+      "name": "Khatva",
+      "display": "Khatva",
+      "meaning": "Bed",
+      "start": 173.0,
+      "end": 178.2,
+      "title_start": 173.0,
+      "title_end": 176.1
+    },
+    {
+      "id": 23,
+      "name": "Bherundha",
+      "display": "Bherundha",
+      "meaning": "Express love birds",
+      "start": 178.2,
+      "end": 181.3,
+      "title_start": 178.2,
+      "title_end": 181.3
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+# Only list what you want to change; everything else uses the defaults in samyukta/utils.py
+paths:
+  dataset_root: data/Samyukta            # folders like Anjali(1)/, Berunda(1)/ ... (the '(1)' is stripped automatically)
+  teacher_video: reference/samyukta_hasta.mp4
+  teacher_segments: reference/teacher_segments.json
+  outputs: outputs
+
+dataset:
+  double_hand_path_hint: ""   # your folders hold only the 21 Samyukta classes
+  # regex with one group that pulls the volunteer id out of the file name -> volunteer-disjoint split.
+  # Leave empty if the files carry no volunteer id (accuracy will then be optimistic).
+  group_regex: ""
+
+train:
+  epochs_head: 3
+  epochs_finetune: 12
+  batch_size: 32
+  num_workers: 0          # Windows: keep 0 (4 is fine on Linux/Kaggle)
+
+video:
+  sample_fps: 6
+
+crop:
+  method: mediapipe       # mediapipe | roi | full
+  # The teacher video is a screen recording of a YouTube page: set the box where the dancer's hands are.
+  # Normalised [x, y, w, h], e.g. [0.25, 0.15, 0.5, 0.7]. Check outputs/teacher/crops/ and adjust.
+  roi: null
+  hand_landmarker_model: hand_landmarker.task
+
+teacher:
+  label_source: segment   # segment | classifier
+  aliases:
+    Dola: null
+    Utsanga: null

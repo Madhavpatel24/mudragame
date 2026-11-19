@@ -1,0 +1,27 @@
+                 precision    recall  f1-score   support
+
+         Anjali      0.989     1.000     0.994        89
+        Berunda      1.000     1.000     1.000        86
+         Chakra      1.000     1.000     1.000        92
+         Garuda      1.000     1.000     1.000        95
+       Kapotham      1.000     0.990     0.995       100
+       Karkatta      1.000     1.000     1.000        83
+Kartariswastika      1.000     1.000     1.000       102
+ Katakavardhana      1.000     1.000     1.000       115
+         Khatva      0.986     1.000     0.993        69
+         Kilaka      0.958     0.986     0.971        69
+          Kurma      1.000     1.000     1.000        90
+         Matsya      1.000     1.000     1.000        99
+     Nagabandha      1.000     1.000     1.000        87
+          Pasha      0.986     0.961     0.973        76
+     Pushpaputa      1.000     0.991     0.995       109
+         Sakata      1.000     1.000     1.000        92
+        Samputa      1.000     1.000     1.000        97
+         Shanka      1.000     1.000     1.000       109
+     Shivalinga      1.000     1.000     1.000       102
+      Swastikam      1.000     1.000     1.000       112
+         Varaha      1.000     1.000     1.000        83
+
+       accuracy                          0.997      1956
+      macro avg      0.996     0.997     0.996      1956
+   weighted avg      0.997     0.997     0.997      1956
