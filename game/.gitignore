@@ -3,3 +3,4 @@ node_modules/
 next-env.d.ts
 # copied from asamyukta/frontend/public/model by scripts/sync-model.mjs
 public/model/
+.env*.local

@@ -5,7 +5,10 @@ import { computeFeatures } from "@asamyukta/mudra/features"
 import type { HoldRules } from "./engine/hold"
 
 // Where Aparna's model server runs. Change this one value when it is hosted.
-export const SAMYUKTA_URL = process.env.NEXT_PUBLIC_SAMYUKTA_URL ?? "http://localhost:8001"
+// In development it falls back to a server on this computer; a production build uses the hosted one.
+export const SAMYUKTA_URL =
+  process.env.NEXT_PUBLIC_SAMYUKTA_URL ??
+  (process.env.NODE_ENV === "production" ? "https://samyukta-server.onrender.com" : "http://localhost:8001")
 
 /** What the screens say about each mode. The switcher itself knows none of this. */
 export type ModeInfo = {
@@ -44,9 +47,11 @@ export const MODE_INFO: Record<ModeId, ModeInfo> = {
     handsNeeded: 2,
     mudraCount: 21,
     runsOn: "server",
-    sampleIntervalMs: 600,
-    hold: { holdMs: 1500, minReadings: 2, graceMs: 1400 },
-    loadingNote: "Connecting to the model server. If it was asleep this can take up to a minute.",
+    // A hosted free server takes about 1.5 s per reading, so readings are far apart: allow a long grace
+    // between them. Frames are skipped while one is still being read, so a short interval is safe.
+    sampleIntervalMs: 300,
+    hold: { holdMs: 1500, minReadings: 2, graceMs: 3600 },
+    loadingNote: "Connecting to the model server. If it was asleep this can take a minute or two.",
   },
 }
 
@@ -84,7 +89,7 @@ const modes: ModeConfig[] = [
     handsNeeded: 2,
     create: () => {
       setWaking(null)
-      return new SamyuktaRecogniser({ baseUrl: SAMYUKTA_URL, onWaking: setWaking })
+      return new SamyuktaRecogniser({ baseUrl: SAMYUKTA_URL, onWaking: setWaking, wakeTimeoutMs: 150_000 })
     },
   },
 ]
