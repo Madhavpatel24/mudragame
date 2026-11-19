@@ -15,7 +15,8 @@ ENV PYTHONUNBUFFERED=1 \
 WORKDIR /app
 
 # The CPU build is about 200 MB. The default Linux build pulls in gigabytes of GPU libraries.
-RUN pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
+# --extra-index-url (not --index-url): PyTorch's index lacks some small dependencies, which must come from PyPI.
+RUN pip install torch==2.8.0 torchvision==0.23.0 --extra-index-url https://download.pytorch.org/whl/cpu
 
 COPY deploy/samyukta/requirements.txt ./requirements.txt
 RUN pip install -r requirements.txt

@@ -1,6 +1,7 @@
 # Versions tested locally with Aparna's server (Python 3.10).
 # torch and torchvision are installed separately from the CPU-only index (see the Dockerfile).
 mediapipe==0.10.14
+opencv-contrib-python==4.12.0.88  # the version tested; mediapipe would otherwise pull in OpenCV 5
 numpy==2.2.6
 pillow==12.2.0
 pyyaml==6.0.3
