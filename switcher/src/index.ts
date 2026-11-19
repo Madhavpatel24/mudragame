@@ -9,3 +9,9 @@ export {
   type ClassifierLike,
   type LandmarkerLike,
 } from "./adapters/asamyukta"
+export {
+  SamyuktaRecogniser,
+  SamyuktaServerError,
+  BusyError,
+  type SamyuktaOptions,
+} from "./adapters/samyukta"
