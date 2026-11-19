@@ -1,13 +1,16 @@
-# Hosting the Samyukta server on Hugging Face Spaces
+# Hosting the Samyukta server on Hugging Face Spaces (free)
 
-1. Build the folder to push:
+The Docker SDK is a paid option on Hugging Face, so this uses the free **Gradio** SDK. It runs any Python
+program: `app.py` starts Aparna's server, unchanged, on port 7860.
+
+1. Build the folder to upload:
 
        python deploy/huggingface/make_space.py
 
-2. On huggingface.co, create a new Space: SDK **Docker**, hardware **CPU basic**, visibility Public.
-3. Push the folder `deploy/huggingface/space/` to the Space's git repo. `model.pt` is larger than
-   10 MB, so install Git LFS first (`git lfs install`). The folder already marks `*.pt` for LFS.
-4. Wait for the build. When it is running, `https://<user>-<space>.hf.space/health` should answer.
+2. On huggingface.co create a new Space: SDK **Gradio**, template **Blank**, hardware **CPU basic**, visibility **Public**.
+3. Open the Space's **Files** tab, then **Add file**, then **Upload files**, and drag in everything inside
+   `deploy/huggingface/space/` (the contents, not the folder). The website handles the large model file itself.
+4. Commit. Wait for the status to read **Running**, then open `https://<user>-<space>.hf.space/health`.
 5. Set `NEXT_PUBLIC_SAMYUKTA_URL` to that address where the game app is hosted.
 
-Check Hugging Face's current free-tier rules first. Some accounts report that free CPU Spaces need a paid plan.
+The Docker files in `deploy/samyukta/` and `render.yaml` are for hosts that run containers (Render, Cloud Run).
