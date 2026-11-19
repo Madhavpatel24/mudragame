@@ -1,0 +1,128 @@
+{
+  "Anjali": {
+    "meaning": "Salutation",
+    "teacherAgrees": true,
+    "teacherProb": 0.7769,
+    "teacherPredicted": "Anjali"
+  },
+  "Kapotham": {
+    "meaning": "Casket / Pigeon",
+    "teacherAgrees": true,
+    "teacherProb": 0.6428,
+    "teacherPredicted": "Kapotham"
+  },
+  "Karkatta": {
+    "meaning": "Crab",
+    "teacherAgrees": false,
+    "teacherProb": 0.0954,
+    "teacherPredicted": "Khatva"
+  },
+  "Swastikam": {
+    "meaning": "Cross",
+    "teacherAgrees": true,
+    "teacherProb": 0.2348,
+    "teacherPredicted": "Swastikam"
+  },
+  "Pushpaputa": {
+    "meaning": "Holding flowers / Flower basket",
+    "teacherAgrees": true,
+    "teacherProb": 0.3729,
+    "teacherPredicted": "Pushpaputa"
+  },
+  "Shivalinga": {
+    "meaning": "Lord Shiva",
+    "teacherAgrees": true,
+    "teacherProb": 0.4698,
+    "teacherPredicted": "Shivalinga"
+  },
+  "Katakavardhana": {
+    "meaning": "Pair of bracelets / Blessing",
+    "teacherAgrees": false,
+    "teacherProb": 0.0115,
+    "teacherPredicted": "Khatva"
+  },
+  "Kartariswastika": {
+    "meaning": "Scissors / Crossed arrow shafts",
+    "teacherAgrees": true,
+    "teacherProb": 0.6414,
+    "teacherPredicted": "Kartariswastika"
+  },
+  "Sakata": {
+    "meaning": "Gestures describe demons",
+    "teacherAgrees": false,
+    "teacherProb": 0.1005,
+    "teacherPredicted": "Khatva"
+  },
+  "Shanka": {
+    "meaning": "Shell",
+    "teacherAgrees": false,
+    "teacherProb": 0.0797,
+    "teacherPredicted": "Pasha"
+  },
+  "Chakra": {
+    "meaning": "Wheel",
+    "teacherAgrees": false,
+    "teacherProb": 0.1015,
+    "teacherPredicted": "Karkatta"
+  },
+  "Samputa": {
+    "meaning": "Hiding something / Container",
+    "teacherAgrees": true,
+    "teacherProb": 0.5987,
+    "teacherPredicted": "Samputa"
+  },
+  "Pasha": {
+    "meaning": "Rope",
+    "teacherAgrees": true,
+    "teacherProb": 0.6952,
+    "teacherPredicted": "Pasha"
+  },
+  "Kilaka": {
+    "meaning": "Emotional bond",
+    "teacherAgrees": false,
+    "teacherProb": 0.2294,
+    "teacherPredicted": "Pasha"
+  },
+  "Matsya": {
+    "meaning": "Fish",
+    "teacherAgrees": true,
+    "teacherProb": 0.5988,
+    "teacherPredicted": "Matsya"
+  },
+  "Kurma": {
+    "meaning": "Tortoise",
+    "teacherAgrees": false,
+    "teacherProb": 0.0395,
+    "teacherPredicted": "Kartariswastika"
+  },
+  "Varaha": {
+    "meaning": "Wild pig",
+    "teacherAgrees": false,
+    "teacherProb": 0.0347,
+    "teacherPredicted": "Matsya"
+  },
+  "Garuda": {
+    "meaning": "Mythological bird / Eagle",
+    "teacherAgrees": false,
+    "teacherProb": 0.0332,
+    "teacherPredicted": "Kurma"
+  },
+  "Nagabandha": {
+    "meaning": "Coiled Serpent",
+    "teacherAgrees": true,
+    "teacherProb": 0.362,
+    "teacherPredicted": "Nagabandha"
+  },
+  "Khatva": {
+    "meaning": "Bed",
+    "teacherAgrees": true,
+    "teacherProb": 0.2051,
+    "teacherPredicted": "Khatva"
+  },
+  "Berunda": {
+    "meaning": "Express love birds",
+    "teacherAgrees": true,
+    "teacherProb": 0.5917,
+    "teacherPredicted": "Berunda"
+  }
+}

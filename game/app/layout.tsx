@@ -15,7 +15,7 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${playfair.variable} ${poppins.variable}`}>
-      <body className="min-h-screen bg-background font-sans text-foreground antialiased">
+      <body className="paper-grain min-h-screen bg-background font-sans text-foreground antialiased">
         <ModeProvider>{children}</ModeProvider>
       </body>
     </html>

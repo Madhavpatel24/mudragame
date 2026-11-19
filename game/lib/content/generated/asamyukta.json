@@ -1,0 +1,272 @@
+{
+  "Alapadma": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 1.0,
+    "lookalikes": [
+      {
+        "id": "Ardhapathaka",
+        "share": 0.381
+      },
+      {
+        "id": "Tripathaka",
+        "share": 0.299
+      }
+    ],
+    "photo": "/mudras/asamyukta/alapadma.jpg"
+  },
+  "Arala": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.975,
+    "lookalikes": [
+      {
+        "id": "Shukatunda",
+        "share": 0.497
+      },
+      {
+        "id": "Sarpashirsha",
+        "share": 0.377
+      }
+    ],
+    "photo": "/mudras/asamyukta/arala.jpg"
+  },
+  "Ardhachandra": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 1.0,
+    "lookalikes": [
+      {
+        "id": "Sarpashirsha",
+        "share": 0.307
+      }
+    ],
+    "photo": "/mudras/asamyukta/ardhachandra.jpg"
+  },
+  "Ardhapathaka": {
+    "sampleAccuracy": 0.947,
+    "meanProb": 0.957,
+    "lookalikes": [
+      {
+        "id": "Tripathaka",
+        "share": 0.483
+      },
+      {
+        "id": "Kartarimukha",
+        "share": 0.445
+      }
+    ],
+    "photo": "/mudras/asamyukta/ardhapathaka.jpg"
+  },
+  "Chandrakala": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 1.0,
+    "lookalikes": [
+      {
+        "id": "Suchi",
+        "share": 0.401
+      }
+    ],
+    "photo": "/mudras/asamyukta/chandrakala.jpg"
+  },
+  "Hamsasya": {
+    "sampleAccuracy": 0.952,
+    "meanProb": 0.962,
+    "lookalikes": [
+      {
+        "id": "Arala",
+        "share": 0.365
+      },
+      {
+        "id": "Tripathaka",
+        "share": 0.313
+      }
+    ],
+    "photo": "/mudras/asamyukta/hamsasya.jpg"
+  },
+  "Kapittha": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.987,
+    "lookalikes": [
+      {
+        "id": "Tamrachuda",
+        "share": 0.369
+      },
+      {
+        "id": "Mushti",
+        "share": 0.33
+      }
+    ],
+    "photo": "/mudras/asamyukta/kapittha.jpg"
+  },
+  "Kartarimukha": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 1.0,
+    "lookalikes": [
+      {
+        "id": "Mayura",
+        "share": 0.524
+      },
+      {
+        "id": "Ardhapathaka",
+        "share": 0.445
+      }
+    ],
+    "photo": "/mudras/asamyukta/kartarimukha.jpg"
+  },
+  "Mayura": {
+    "sampleAccuracy": 0.96,
+    "meanProb": 0.96,
+    "lookalikes": [
+      {
+        "id": "Kartarimukha",
+        "share": 0.524
+      },
+      {
+        "id": "Ardhapathaka",
+        "share": 0.422
+      }
+    ],
+    "photo": "/mudras/asamyukta/mayura.jpg"
+  },
+  "Mukula": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 1.0,
+    "lookalikes": [
+      {
+        "id": "Sarpashirsha",
+        "share": 0.411
+      },
+      {
+        "id": "Shukatunda",
+        "share": 0.352
+      }
+    ],
+    "photo": "/mudras/asamyukta/mukula.jpg"
+  },
+  "Mushti": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 1.0,
+    "lookalikes": [
+      {
+        "id": "Kapittha",
+        "share": 0.33
+      }
+    ],
+    "photo": "/mudras/asamyukta/mushti.jpg"
+  },
+  "Pathaka": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.985,
+    "lookalikes": [
+      {
+        "id": "Tripathaka",
+        "share": 0.615
+      },
+      {
+        "id": "Sarpashirsha",
+        "share": 0.513
+      }
+    ],
+    "photo": "/mudras/asamyukta/pathaka.jpg"
+  },
+  "Sarpashirsha": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.999,
+    "lookalikes": [
+      {
+        "id": "Tripathaka",
+        "share": 0.542
+      },
+      {
+        "id": "Pathaka",
+        "share": 0.513
+      }
+    ],
+    "photo": "/mudras/asamyukta/sarpashirsha.jpg"
+  },
+  "Shikhara": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 1.0,
+    "lookalikes": [],
+    "photo": "/mudras/asamyukta/shikhara.jpg"
+  },
+  "Shukatunda": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 1.0,
+    "lookalikes": [
+      {
+        "id": "Tripathaka",
+        "share": 0.51
+      },
+      {
+        "id": "Arala",
+        "share": 0.497
+      }
+    ],
+    "photo": "/mudras/asamyukta/shukatunda.jpg"
+  },
+  "Simhamukha": {
+    "sampleAccuracy": 0.933,
+    "meanProb": 0.933,
+    "lookalikes": [
+      {
+        "id": "Kartarimukha",
+        "share": 0.334
+      },
+      {
+        "id": "Mayura",
+        "share": 0.277
+      }
+    ],
+    "photo": "/mudras/asamyukta/simhamukha.jpg"
+  },
+  "Suchi": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.985,
+    "lookalikes": [
+      {
+        "id": "Tamrachuda",
+        "share": 0.469
+      },
+      {
+        "id": "Chandrakala",
+        "share": 0.401
+      }
+    ],
+    "photo": "/mudras/asamyukta/suchi.jpg"
+  },
+  "Tamrachuda": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 1.0,
+    "lookalikes": [
+      {
+        "id": "Suchi",
+        "share": 0.469
+      },
+      {
+        "id": "Kapittha",
+        "share": 0.369
+      }
+    ],
+    "photo": "/mudras/asamyukta/tamrachuda.jpg"
+  },
+  "Tripathaka": {
+    "sampleAccuracy": 0.952,
+    "meanProb": 0.953,
+    "lookalikes": [
+      {
+        "id": "Pathaka",
+        "share": 0.615
+      },
+      {
+        "id": "Sarpashirsha",
+        "share": 0.542
+      }
+    ],
+    "photo": "/mudras/asamyukta/tripathaka.jpg"
+  },
+  "Trishula": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 1.0,
+    "lookalikes": [],
+    "photo": "/mudras/asamyukta/trishula.jpg"
+  }
+}

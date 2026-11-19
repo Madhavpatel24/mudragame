@@ -1,0 +1,258 @@
+{
+  "Anjali": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.835,
+    "lookalikes": [
+      {
+        "id": "Swastikam",
+        "share": 0.166
+      }
+    ],
+    "photo": "/mudras/samyukta/anjali.jpg",
+    "photoSource": "Anjali_483.jpg"
+  },
+  "Berunda": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.88,
+    "lookalikes": [
+      {
+        "id": "Nagabandha",
+        "share": 0.084
+      },
+      {
+        "id": "Kartariswastika",
+        "share": 0.075
+      }
+    ],
+    "photo": "/mudras/samyukta/berunda.jpg",
+    "photoSource": "Berunda  _88.jpg"
+  },
+  "Chakra": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.921,
+    "lookalikes": [],
+    "photo": "/mudras/samyukta/chakra.jpg",
+    "photoSource": "Chakra _0.jpg"
+  },
+  "Garuda": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.899,
+    "lookalikes": [
+      {
+        "id": "Kartariswastika",
+        "share": 0.08
+      },
+      {
+        "id": "Nagabandha",
+        "share": 0.059
+      }
+    ],
+    "photo": "/mudras/samyukta/garuda.jpg",
+    "photoSource": "Garuda  _450.jpg"
+  },
+  "Kapotham": {
+    "sampleAccuracy": 0.96,
+    "meanProb": 0.894,
+    "lookalikes": [],
+    "photo": "/mudras/samyukta/kapotham.jpg",
+    "photoSource": "Kapotham_52.jpg"
+  },
+  "Karkatta": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.93,
+    "lookalikes": [],
+    "photo": "/mudras/samyukta/karkatta.jpg",
+    "photoSource": "Karkatta _22.jpg"
+  },
+  "Kartariswastika": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.928,
+    "lookalikes": [
+      {
+        "id": "Nagabandha",
+        "share": 0.118
+      },
+      {
+        "id": "Swastikam",
+        "share": 0.1
+      }
+    ],
+    "photo": "/mudras/samyukta/kartariswastika.jpg",
+    "photoSource": "Kartariswastika _189.jpg"
+  },
+  "Katakavardhana": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.893,
+    "lookalikes": [],
+    "photo": "/mudras/samyukta/katakavardhana.jpg",
+    "photoSource": "Katakavardhana _90.jpg"
+  },
+  "Khatva": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.748,
+    "lookalikes": [
+      {
+        "id": "Samputa",
+        "share": 0.101
+      },
+      {
+        "id": "Kurma",
+        "share": 0.095
+      }
+    ],
+    "photo": "/mudras/samyukta/khatva.jpg",
+    "photoSource": "Khatva  _180.jpg"
+  },
+  "Kilaka": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.864,
+    "lookalikes": [
+      {
+        "id": "Pasha",
+        "share": 0.122
+      },
+      {
+        "id": "Khatva",
+        "share": 0.058
+      }
+    ],
+    "photo": "/mudras/samyukta/kilaka.jpg",
+    "photoSource": "Kilaka  _360.jpg"
+  },
+  "Kurma": {
+    "sampleAccuracy": 0.96,
+    "meanProb": 0.869,
+    "lookalikes": [
+      {
+        "id": "Samputa",
+        "share": 0.116
+      },
+      {
+        "id": "Pasha",
+        "share": 0.096
+      }
+    ],
+    "photo": "/mudras/samyukta/kurma.jpg",
+    "photoSource": "Kurma  _264.jpg"
+  },
+  "Matsya": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.93,
+    "lookalikes": [],
+    "photo": "/mudras/samyukta/matsya.jpg",
+    "photoSource": "Matsya  _78.jpg"
+  },
+  "Nagabandha": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.915,
+    "lookalikes": [
+      {
+        "id": "Kartariswastika",
+        "share": 0.118
+      },
+      {
+        "id": "Swastikam",
+        "share": 0.102
+      }
+    ],
+    "photo": "/mudras/samyukta/nagabandha.jpg",
+    "photoSource": "Nagabandha  _230.jpg"
+  },
+  "Pasha": {
+    "sampleAccuracy": 0.96,
+    "meanProb": 0.777,
+    "lookalikes": [
+      {
+        "id": "Kilaka",
+        "share": 0.122
+      },
+      {
+        "id": "Kurma",
+        "share": 0.096
+      }
+    ],
+    "photo": "/mudras/samyukta/pasha.jpg",
+    "photoSource": "Pasha  _400.jpg"
+  },
+  "Pushpaputa": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.88,
+    "lookalikes": [],
+    "photo": "/mudras/samyukta/pushpaputa.jpg",
+    "photoSource": "Pushpaputa _364.jpg"
+  },
+  "Sakata": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.9,
+    "lookalikes": [],
+    "photo": "/mudras/samyukta/sakata.jpg",
+    "photoSource": "Sakata _336.jpg"
+  },
+  "Samputa": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.839,
+    "lookalikes": [
+      {
+        "id": "Kurma",
+        "share": 0.116
+      },
+      {
+        "id": "Khatva",
+        "share": 0.101
+      }
+    ],
+    "photo": "/mudras/samyukta/samputa.jpg",
+    "photoSource": "Samputa  _150.jpg"
+  },
+  "Shanka": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.938,
+    "lookalikes": [
+      {
+        "id": "Swastikam",
+        "share": 0.083
+      }
+    ],
+    "photo": "/mudras/samyukta/shanka.jpg",
+    "photoSource": "Shanka _448.jpg"
+  },
+  "Shivalinga": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.895,
+    "lookalikes": [
+      {
+        "id": "Kartariswastika",
+        "share": 0.099
+      },
+      {
+        "id": "Pasha",
+        "share": 0.078
+      }
+    ],
+    "photo": "/mudras/samyukta/shivalinga.jpg",
+    "photoSource": "Shivalinga _621.jpg"
+  },
+  "Swastikam": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.828,
+    "lookalikes": [
+      {
+        "id": "Anjali",
+        "share": 0.166
+      },
+      {
+        "id": "Nagabandha",
+        "share": 0.102
+      }
+    ],
+    "photo": "/mudras/samyukta/swastikam.jpg",
+    "photoSource": "Swastika\u200bm _261.jpg"
+  },
+  "Varaha": {
+    "sampleAccuracy": 1.0,
+    "meanProb": 0.908,
+    "lookalikes": [],
+    "photo": "/mudras/samyukta/varaha.jpg",
+    "photoSource": "Varaha  _0.jpg"
+  }
+}

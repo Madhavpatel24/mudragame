@@ -35,7 +35,7 @@ export function ModeProvider({ children }: { children: ReactNode }) {
   }, [manager])
 
   const value = useMemo<ModeContext>(
-    () => ({ manager, state, waking, info: state.mode ? (MODE_INFO[state.mode] ?? null) : null }),
+    () => ({ manager, state, waking, info: state.mode ? ((MODE_INFO as Record<string, ModeInfo>)[state.mode] ?? null) : null }),
     [manager, state, waking]
   )
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>

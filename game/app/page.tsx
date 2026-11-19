@@ -44,7 +44,7 @@ export default function ModeScreen() {
   const errorId = state.status === "error" ? state.mode : null
 
   return (
-    <main className="paper-grain mx-auto flex min-h-screen max-w-5xl flex-col px-4 py-10 md:px-6 md:py-16">
+    <main className="mx-auto flex min-h-screen max-w-5xl flex-col px-4 py-10 md:px-6 md:py-16">
       <header className="mb-14 flex items-center gap-3">
         <span className="grid h-10 w-10 place-items-center rounded-full bg-accent font-serif text-lg text-accent-foreground" aria-hidden>
           ॐ

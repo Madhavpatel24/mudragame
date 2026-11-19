@@ -178,7 +178,7 @@ const live = await fetch(`${LIVE}/health`, { signal: AbortSignal.timeout(1500) }
   .catch(() => false)
 const teacher = new URL("../../vendor/samyukta-hasta-game/outputs/teacher/", import.meta.url)
 
-describe.skipIf(!live)("against Aparna's real server", () => {
+describe.skipIf(!live)("against Aparna's real server", { timeout: 30_000 }, () => {
   const crop = (n: number) => new Blob([readFileSync(new URL(`crops/frame_${String(n).padStart(6, "0")}.jpg`, teacher))], { type: "image/jpeg" })
 
   it("loads and reports her 21 classes", async () => {

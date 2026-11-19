@@ -2,6 +2,7 @@ import { AsamyuktaRecogniser, SamyuktaRecogniser, createRegistry, type ModeConfi
 import { createHandLandmarker } from "@asamyukta/mudra/hand-landmarker"
 import { loadClassifier } from "@asamyukta/mudra/classifier"
 import { computeFeatures } from "@asamyukta/mudra/features"
+import type { HoldRules } from "./engine/hold"
 
 // Where Aparna's model server runs. Change this one value when it is hosted.
 export const SAMYUKTA_URL = process.env.NEXT_PUBLIC_SAMYUKTA_URL ?? "http://localhost:8001"
@@ -17,10 +18,12 @@ export type ModeInfo = {
   runsOn: "device" | "server"
   /** How often a camera frame is sent for recognition. */
   sampleIntervalMs: number
+  /** How long a pose must be held to count, tuned to how fast this mode gives readings. */
+  hold: HoldRules
   loadingNote: string
 }
 
-export const MODE_INFO: Record<string, ModeInfo> = {
+export const MODE_INFO: Record<ModeId, ModeInfo> = {
   asamyukta: {
     id: "asamyukta",
     title: "Asamyukta",
@@ -30,6 +33,7 @@ export const MODE_INFO: Record<string, ModeInfo> = {
     mudraCount: 21,
     runsOn: "device",
     sampleIntervalMs: 150,
+    hold: { holdMs: 1000, minReadings: 4, graceMs: 450 },
     loadingNote: "Loading the model. The first time this downloads about 10 MB, and it runs on your device.",
   },
   samyukta: {
@@ -40,7 +44,8 @@ export const MODE_INFO: Record<string, ModeInfo> = {
     handsNeeded: 2,
     mudraCount: 21,
     runsOn: "server",
-    sampleIntervalMs: 1000,
+    sampleIntervalMs: 600,
+    hold: { holdMs: 1500, minReadings: 2, graceMs: 1400 },
     loadingNote: "Connecting to the model server. If it was asleep this can take up to a minute.",
   },
 }
