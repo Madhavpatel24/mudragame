@@ -1,0 +1,14 @@
+# Keep the build context small: the Samyukta image only needs a few files from vendor/ and asamyukta/.
+.git
+**/node_modules
+**/.next
+**/__pycache__
+game/
+switcher/
+asamyukta/frontend/public/images
+asamyukta/frontend/app
+asamyukta/frontend/components
+vendor/samyukta-hasta-game/outputs/teacher
+vendor/samyukta-hasta-game/frontend
+vendor/samyukta-hasta-game/game/web
+vendor/samyukta-hasta-game/game/backend

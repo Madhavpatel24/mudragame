@@ -1,0 +1,9 @@
+# Versions tested locally with Aparna's server (Python 3.10).
+# torch and torchvision are installed separately from the CPU-only index (see the Dockerfile).
+mediapipe==0.10.14
+numpy==2.2.6
+pillow==12.2.0
+pyyaml==6.0.3
+fastapi==0.133.1
+uvicorn==0.41.0
+python-multipart==0.0.22

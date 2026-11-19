@@ -1,0 +1,11 @@
+# Render Blueprint for the Samyukta model server.
+# Check the plan name against Render's current plans before deploying (they were renamed in 2026).
+# The server needs about 0.5 GB of memory in use, so a plan with 2 GB is the safe choice.
+services:
+  - type: web
+    name: samyukta-server
+    runtime: docker
+    dockerfilePath: ./deploy/samyukta/Dockerfile
+    dockerContext: .
+    plan: standard
+    healthCheckPath: /health
