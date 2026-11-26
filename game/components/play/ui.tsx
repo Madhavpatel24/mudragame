@@ -33,13 +33,14 @@ export function Meter({ value, label, tone = "accent" }: { value: number; label?
   )
 }
 
-export function Button({ variant = "primary", className, ...rest }: ButtonHTMLAttributes<HTMLButtonElement> & { variant?: "primary" | "ghost" }) {
+export function Button({ variant = "primary", size = "md", className, ...rest }: ButtonHTMLAttributes<HTMLButtonElement> & { variant?: "primary" | "ghost"; size?: "md" | "sm" }) {
   return (
     <button
       type="button"
       {...rest}
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-50",
+        "inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-50",
+        size === "sm" ? "px-4 py-2" : "px-6 py-3",
         variant === "primary" ? "bg-accent text-accent-foreground hover:bg-accent/90" : "border border-border bg-background/60 hover:border-accent/60 hover:text-accent",
         className
       )}

@@ -6,7 +6,23 @@ import { Button, cn } from "./ui"
 import type { Camera } from "./use-camera"
 
 /** The camera picture with its start button and a hint when the hands are not found. */
-export function CameraPanel({ cam, handsNeeded, overlay, className }: { cam: Camera; handsNeeded: 1 | 2; overlay?: ReactNode; className?: string }) {
+export function CameraPanel({
+  cam,
+  handsNeeded,
+  overlay,
+  className,
+  fill = false,
+  aside,
+}: {
+  cam: Camera
+  handsNeeded: 1 | 2
+  overlay?: ReactNode
+  className?: string
+  /** Take all the height of the parent instead of keeping a 4:3 shape. */
+  fill?: boolean
+  /** Shown beside the start button. */
+  aside?: ReactNode
+}) {
   const hands = cam.last?.handsSeen ?? null
   const hint =
     cam.status !== "on"
@@ -18,9 +34,9 @@ export function CameraPanel({ cam, handsNeeded, overlay, className }: { cam: Cam
           : null
 
   return (
-    <div className={className}>
-      <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-[#1a120a]">
-        <video ref={cam.attach} muted playsInline className={cn("h-full w-full -scale-x-100 object-cover", cam.status !== "on" && "invisible")} />
+    <div className={cn(fill && "flex min-h-0 flex-col", className)}>
+      <div className={cn("relative overflow-hidden rounded-3xl border border-border bg-[#1a120a]", fill ? "min-h-0 flex-1" : "aspect-[4/3]")}>
+        <video ref={cam.attach} muted playsInline className={cn("h-full w-full -scale-x-100 object-cover", fill && "absolute inset-0", cam.status !== "on" && "invisible")} />
         {cam.status !== "on" && (
           <div className="absolute inset-0 grid place-items-center p-6 text-center text-sm text-[#e8d4b8]">
             {cam.status === "starting" ? "Starting the camera…" : "The camera is off."}
@@ -28,16 +44,17 @@ export function CameraPanel({ cam, handsNeeded, overlay, className }: { cam: Cam
         )}
         {overlay && <div className="pointer-events-none absolute inset-x-0 bottom-0 p-4">{overlay}</div>}
       </div>
-      <div className="mt-3 flex flex-wrap items-center gap-3">
+      <div className={cn("flex flex-wrap items-center gap-3", fill ? "mt-2" : "mt-3")}>
         {cam.status === "on" ? (
-          <Button variant="ghost" onClick={cam.stop}>
+          <Button variant="ghost" size={fill ? "sm" : "md"} onClick={cam.stop}>
             <Square className="h-4 w-4" aria-hidden /> Stop camera
           </Button>
         ) : (
-          <Button onClick={cam.start} disabled={cam.status === "starting"}>
+          <Button size={fill ? "sm" : "md"} onClick={cam.start} disabled={cam.status === "starting"}>
             <CameraIcon className="h-4 w-4" aria-hidden /> Start camera
           </Button>
         )}
+        {aside}
         {hint && <span role="status" className="text-sm text-amber-800">{hint}</span>}
       </div>
       {cam.error && <p role="alert" className="mt-3 text-sm text-rose-800">{cam.error}</p>}
