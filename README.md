@@ -57,7 +57,7 @@ Set `NEXT_PUBLIC_SAMYUKTA_URL` to point the app at a hosted server instead.
 
 ## Content
 
-- **Photos** come from the Bharatanatyam Mudra Dataset (CC BY-SA 4.0). See `NOTICE.md`.
+- **Photos:** Samyukta from the Bharatanatyam Mudra Dataset (CC BY-SA 4.0); Asamyukta drawings made by the team. See `NOTICE.md`.
 - **Samyukta meanings** come from Aparna's teacher reference.
 - **Asamyukta meanings** are a draft from standard descriptions. A dance teacher should check them.
 - To rebuild the photos and look-alike tables: `python tools/build_content_assets.py <dataset folder>`.

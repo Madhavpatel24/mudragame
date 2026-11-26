@@ -1,7 +1,7 @@
 """Builds the photos and the "looks like" tables for the game, for both modes.
 
 For every mudra it
-  1. picks one clear, typical photo from the Bharatanatyam Mudra Dataset (CC BY-SA 4.0),
+  1. picks one clear, typical photo from the Bharatanatyam Mudra Dataset (CC BY-SA 4.0), for Samyukta,
   2. removes the green studio background and puts the hands on black,
   3. runs the mode's own model over sample photos to see which mudras get mixed up.
 
@@ -160,7 +160,6 @@ def asamyukta():
     classes = [str(c) for c in nrityanetra.label_encoder.classes_]
     photos = ROOT / "game" / "public" / "mudras" / "asamyukta"
     photos.mkdir(parents=True, exist_ok=True)
-    guide = ROOT / "asamyukta" / "frontend" / "public" / "images" / "mudra-guide"
 
     rows = []
     for c, folder_name in ASAMYUKTA.items():
@@ -172,10 +171,12 @@ def asamyukta():
         print("asamyukta", c, "done", flush=True)
 
     stats = summarise(classes, rows)
-    for c in ASAMYUKTA:
-        src = guide / f"{c.lower()}.jpg"
-        if src.exists():
-            shutil.copy(src, photos / f"{c.lower()}.jpg")
+    # The Asamyukta drawings are made by tools/prepare_illustrations.py into game/public/mudras/asamyukta/;
+    # this script only measures the look-alikes and must not overwrite them.
+    # Samdamsha has no photos in the dataset, so it cannot be measured: it gets cautious defaults.
+    stats["Samdamsha"] = {"sampleAccuracy": 0.4, "meanProb": 0.4, "lookalikes": [{"id": "Mukula", "share": 0.3}]}
+    for c in stats:
+        if (photos / f"{c.lower()}.jpg").exists():
             stats[c]["photo"] = f"/mudras/asamyukta/{c.lower()}.jpg"
     write("asamyukta", photos, stats)
 

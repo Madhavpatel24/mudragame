@@ -9,6 +9,8 @@ export type Mudra = {
   /** Things this mudra can stand for, phrased for "show me ..." prompts. */
   uses: string[]
   photo: string | null
+  /** true: the picture has a white background (a drawing), so its frame is white too. */
+  light?: boolean
   /** Mudras the model tends to mix this one up with, from sample photos. */
   lookalikes: LookAlike[]
   /** 0 = easiest to get right, 1 = hardest. */

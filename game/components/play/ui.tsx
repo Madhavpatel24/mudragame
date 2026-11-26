@@ -47,10 +47,10 @@ export function Button({ variant = "primary", className, ...rest }: ButtonHTMLAt
   )
 }
 
-/** The black-background photo of a mudra. */
+/** The picture of a mudra: a photograph on black, or a drawing on white. */
 export function MudraPhoto({ mudra, className }: { mudra: Mudra; className?: string }) {
   return (
-    <div className={cn("overflow-hidden rounded-2xl border border-border bg-[#0a0807]", className)}>
+    <div className={cn("overflow-hidden rounded-2xl border border-border", mudra.light ? "bg-white" : "bg-[#0a0807]", className)}>
       {mudra.photo ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={mudra.photo} alt={`The ${mudra.name} mudra`} className="h-full w-full object-contain" />

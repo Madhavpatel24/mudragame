@@ -7,9 +7,9 @@ import type { LookAlike, ModeId, Mudra } from "./types"
 
 export type { Mudra, ModeId, LookAlike } from "./types"
 
-/** The photographs are from the Bharatanatyam Mudra Dataset. Its licence asks for this credit. */
+/** Shown on the games screen. The dataset's licence asks for the Samyukta credit. */
 export const PHOTO_CREDIT = {
-  text: "Mudra photographs: Bharatanatyam Mudra Dataset by Jisha Raj R and colleagues (College of Engineering, Attingal), licensed CC BY-SA 4.0. Backgrounds were removed.",
+  text: "Two-hand mudra photographs: Bharatanatyam Mudra Dataset by Jisha Raj R and colleagues (College of Engineering, Attingal), licensed CC BY-SA 4.0, backgrounds removed. Single-hand mudra illustrations: made by the project team.",
   href: "https://github.com/Madhavpatel24/mudragame/blob/main/NOTICE.md",
 }
 
@@ -25,7 +25,8 @@ function difficultyOf(recognisability: number, lookalikes: LookAlike[]): number 
 function build(
   gen: Generated,
   meanings: Record<string, Meaning>,
-  extra: (id: string, g: Generated[string]) => { recognisability: number; strict: boolean }
+  extra: (id: string, g: Generated[string]) => { recognisability: number; strict: boolean },
+  light = false
 ): Mudra[] {
   const out: Mudra[] = []
   for (const [id, m] of Object.entries(meanings)) {
@@ -38,6 +39,7 @@ function build(
       meaning: m.meaning,
       uses: m.uses,
       photo: g.photo,
+      light,
       lookalikes: g.lookalikes,
       difficulty: difficultyOf(recognisability, g.lookalikes),
       strict,
@@ -53,7 +55,7 @@ const asamyukta = build(asamyuktaGenerated as Generated, ASAMYUKTA_MEANINGS, (id
   // the independent test accuracy is the honest measure; fall back to the sample when there is none
   const measured = guide?.accuracy != null ? guide.accuracy / 100 : 0.6 * g.sampleAccuracy + 0.4 * g.meanProb
   return { recognisability: measured, strict: guide?.tier === "reliable" }
-})
+}, true) // the single-hand pictures are drawings on white
 
 const teacher = samyuktaTeacher as Record<string, { teacherAgrees: boolean; teacherPredicted: string }>
 

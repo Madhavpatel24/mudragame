@@ -268,5 +268,16 @@
     "meanProb": 1.0,
     "lookalikes": [],
     "photo": "/mudras/asamyukta/trishula.jpg"
+  },
+  "Samdamsha": {
+    "sampleAccuracy": 0.4,
+    "meanProb": 0.4,
+    "lookalikes": [
+      {
+        "id": "Mukula",
+        "share": 0.3
+      }
+    ],
+    "photo": "/mudras/asamyukta/samdamsha.jpg"
   }
 }

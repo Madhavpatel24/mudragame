@@ -1,8 +1,13 @@
 # Notices
 
-## Mudra photographs
+## Single-hand (Asamyukta) illustrations
 
-The mudra photographs in `game/public/mudras/` come from the **Bharatanatyam Mudra Dataset**
+The drawings in `game/public/mudras/asamyukta/` were made by the project team. They were centred on a white
+background and resized (`tools/prepare_illustrations.py`).
+
+## Two-hand (Samyukta) photographs
+
+The photographs in `game/public/mudras/samyukta/` come from the **Bharatanatyam Mudra Dataset**
 (Jisha Raj R and colleagues, College of Engineering, Attingal, Kerala), licensed under
 [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 

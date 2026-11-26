@@ -11,7 +11,7 @@ describe.each(MODES)("content: %s", (mode) => {
   const mudras = getMudras(mode)
 
   it("has a full set of mudras", () => {
-    expect(mudras.length).toBeGreaterThanOrEqual(18)
+    expect(mudras.length).toBe(21)
     expect(new Set(mudras.map((m) => m.id)).size).toBe(mudras.length)
   })
 
