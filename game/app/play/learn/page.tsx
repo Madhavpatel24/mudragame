@@ -209,18 +209,18 @@ export default function Learn() {
   // stack at full size and the page scrolls.
   return (
     <main className="mx-auto flex w-full max-w-[1800px] flex-col gap-3 px-4 py-3 fit:h-dvh fit:overflow-hidden md:px-6 md:py-4">
-      <header className="flex shrink-0 items-center gap-4">
-        <button type="button" onClick={() => router.push("/play")} className="inline-flex shrink-0 items-center gap-1.5 text-sm text-muted-foreground transition hover:text-accent">
+      {/* equal outer columns keep the title in the middle of the page */}
+      <header className="grid shrink-0 grid-cols-[minmax(2.75rem,1fr)_auto_minmax(2.75rem,1fr)] items-center gap-3">
+        <button type="button" onClick={() => router.push("/play")} className="inline-flex items-center gap-1.5 justify-self-start text-sm text-muted-foreground transition hover:text-accent">
           <ArrowLeft className="h-4 w-4" aria-hidden /> <span className="sr-only sm:not-sr-only">Back to games</span>
         </button>
-        <div className="min-w-0">
+        <div className="min-w-0 text-center">
           <p className="eyebrow hidden sm:block">{info.title} · Learn</p>
           <h1 className="truncate font-serif text-xl leading-tight md:text-2xl">Learn the mudras</h1>
         </div>
-        <Button variant="ghost" size="sm" className="ml-auto shrink-0" onClick={() => setPhotoLeft((v) => !v)} aria-label="Swap the photo and the camera">
+        <Button variant="ghost" size="sm" className="justify-self-end" onClick={() => setPhotoLeft((v) => !v)} aria-label="Swap the photo and the camera">
           <ArrowLeftRight className="h-4 w-4" aria-hidden />
           <span className="hidden sm:inline">Photo on the {photoLeft ? "left" : "right"}</span>
-          <span className="sm:hidden">Swap</span>
         </Button>
       </header>
 

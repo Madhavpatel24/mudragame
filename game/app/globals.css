@@ -4,6 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 /* screens big enough to show a whole practice page without scrolling */
+/* low windows, such as small laptops and phones */
+@custom-variant short (@media (max-height: 700px));
+
 @custom-variant fit (@media (min-width: 1024px) and (min-height: 500px));
 
 :root {
