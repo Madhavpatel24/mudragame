@@ -35,6 +35,12 @@ export default function LadderPage() {
   const byId = useMemo(() => new Map(mudras.map((m) => [m.id, m])), [mudras])
 
   if (!info || !ready || levels.length === 0) return null
+  const heading = (
+    <>
+      <p className="eyebrow mb-2">{info.title} · Mudra Ladder</p>
+      <h1 className="mb-8 font-serif text-4xl md:text-5xl">Climb the ladder</h1>
+    </>
+  )
   const names = (ids: string[]) => ids.map((id) => byId.get(id)?.name ?? id).join(", ")
   const unlocked = progress.ladder.unlocked
 
@@ -71,8 +77,7 @@ export default function LadderPage() {
       >
         <ArrowLeft className="h-4 w-4" aria-hidden /> {view.kind === "map" ? "Back to games" : "Back to the levels"}
       </button>
-      <p className="eyebrow mb-2">{info.title} · Mudra Ladder</p>
-      <h1 className="mb-8 font-serif text-4xl md:text-5xl">Climb the ladder</h1>
+      {view.kind !== "test" && heading}
 
       {view.kind === "map" && (
         <>
@@ -114,7 +119,7 @@ export default function LadderPage() {
       {view.kind === "intro" && <Intro level={levels[view.level]!} byId={byId} names={names} onLearn={() => router.push(`/play/learn?m=${levels[view.level]!.fresh[0]}`)} onStart={() => startTest(view.level)} />}
 
       {view.kind === "test" && (
-        <CameraGate cam={cam} info={info}>
+        <CameraGate cam={cam} info={info} header={heading}>
           {view.phase === "play" ? (
             <RoundView
               key={`${view.level}-${view.i}`}

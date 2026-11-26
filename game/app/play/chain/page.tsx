@@ -91,8 +91,6 @@ export default function Chain() {
       <button type="button" onClick={() => router.push("/play")} className="mb-6 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition hover:text-accent">
         <ArrowLeft className="h-4 w-4" aria-hidden /> Back to games
       </button>
-      <p className="eyebrow mb-2">{info.title} · Mudra Chain</p>
-      <h1 className="mb-8 font-serif text-4xl md:text-5xl">Remember the chain</h1>
 
       {friend && phase !== "over" && phase !== "won" && (
         <p className="mb-6 rounded-2xl border border-accent/40 bg-card/70 px-4 py-3 text-sm">
@@ -100,7 +98,16 @@ export default function Chain() {
         </p>
       )}
 
-      <CameraGate cam={cam} info={info}>
+      <CameraGate
+        cam={cam}
+        info={info}
+        header={
+          <>
+            <p className="eyebrow mb-2">{info.title} · Mudra Chain</p>
+            <h1 className="mb-8 font-serif text-4xl md:text-5xl">Remember the chain</h1>
+          </>
+        }
+      >
         {phase === "ready" && (
           <div className="max-w-xl space-y-4">
             <p className="text-lg text-muted-foreground">

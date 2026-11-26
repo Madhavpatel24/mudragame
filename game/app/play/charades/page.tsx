@@ -72,10 +72,17 @@ export default function Charades() {
       <button type="button" onClick={() => router.push("/play")} className="mb-6 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition hover:text-accent">
         <ArrowLeft className="h-4 w-4" aria-hidden /> Back to games
       </button>
-      <p className="eyebrow mb-2">{info.title} · Meaning Charades</p>
-      <h1 className="mb-8 font-serif text-4xl md:text-5xl">Show me…</h1>
 
-      <CameraGate cam={cam} info={info}>
+      <CameraGate
+        cam={cam}
+        info={info}
+        header={
+          <>
+            <p className="eyebrow mb-2">{info.title} · Meaning Charades</p>
+            <h1 className="mb-8 font-serif text-4xl md:text-5xl">Show me…</h1>
+          </>
+        }
+      >
         {phase === "ready" && (
           <div className="max-w-xl space-y-4">
             <p className="text-lg text-muted-foreground">

@@ -30,39 +30,44 @@ export default function Hub() {
   const level = Math.min(progress.ladder.unlocked, ladder.length - 1) + 1
   const fresh = Object.keys(progress.practice).length === 0
 
+  // On a laptop the whole page fits the window. On smaller screens it stacks and scrolls.
   return (
-    <main className="mx-auto min-h-screen max-w-5xl px-4 py-10 md:px-6 md:py-14">
-      <button type="button" onClick={() => router.push("/")} className="mb-8 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition hover:text-accent">
+    <main className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-4 py-10 md:px-6 md:py-14 fit:h-dvh fit:min-h-0 fit:max-w-7xl fit:overflow-hidden fit:py-4">
+      <button type="button" onClick={() => router.push("/")} className="mb-8 inline-flex items-center gap-1.5 self-start text-sm text-muted-foreground transition hover:text-accent fit:mb-3">
         <ArrowLeft className="h-4 w-4" aria-hidden /> Change mode
       </button>
 
-      <p className="eyebrow mb-2">{info.tagline}</p>
-      <h1 className="font-serif text-4xl md:text-6xl">{info.title}</h1>
-      <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
+      <div className="fit:flex fit:items-end fit:justify-between fit:gap-8">
+      <div>
+      <p className="eyebrow mb-2 fit:mb-1">{info.tagline}</p>
+      <h1 className="font-serif text-4xl md:text-6xl fit:text-4xl">{info.title}</h1>
+      <p className="mt-4 max-w-2xl text-lg text-muted-foreground fit:mt-1 fit:max-w-xl fit:text-sm">
         {fresh ? "Start with Learn. Once the mudras feel familiar, the games are open to you any time." : "Pick up where you left off, or try something different."}
       </p>
+      </div>
 
-      <dl className="mt-8 grid max-w-xl grid-cols-3 gap-4 text-center">
+      <dl className="mt-8 grid max-w-xl grid-cols-3 gap-4 text-center fit:mt-0 fit:w-[26rem] fit:shrink-0 fit:gap-3">
         {[
           [`${learned} / ${mudras.length}`, "mudras learned"],
           [`${level} / ${ladder.length}`, "ladder level"],
           [`${Object.keys(progress.practice).length}`, "mudras practised"],
         ].map(([v, l]) => (
-          <div key={l} className="rounded-2xl border border-border bg-card/60 p-4">
+          <div key={l} className="rounded-2xl border border-border bg-card/60 p-4 fit:p-2">
             <dt className="sr-only">{l}</dt>
-            <dd className="font-serif text-3xl">{v}</dd>
-            <p className="mt-1 text-xs text-muted-foreground">{l}</p>
+            <dd className="font-serif text-3xl fit:text-2xl">{v}</dd>
+            <p className="mt-1 text-xs text-muted-foreground fit:mt-0">{l}</p>
           </div>
         ))}
       </dl>
+      </div>
 
-      <ul className="mt-10 grid gap-5 sm:grid-cols-2">
+      <ul className="mt-10 grid gap-5 sm:grid-cols-2 fit:mt-4 fit:min-h-0 fit:flex-1 fit:grid-cols-4 fit:grid-rows-2 fit:gap-4">
         {GAMES.map((g) => (
           <li key={g.href}>
             <Link
               href={g.href}
               className={cn(
-                "group flex h-full flex-col rounded-3xl border bg-card/70 p-6 transition hover:-translate-y-0.5 hover:border-accent/60",
+                "group flex h-full flex-col rounded-3xl border bg-card/70 p-6 transition hover:-translate-y-0.5 hover:border-accent/60 fit:justify-center fit:overflow-hidden fit:p-[min(1.5rem,2.2vh)]",
                 g.accent && fresh ? "border-accent/60 shadow-[0_18px_40px_-26px_rgba(74,44,0,0.5)]" : "border-border"
               )}
             >
@@ -74,15 +79,15 @@ export default function Hub() {
                   </span>
                 )}
               </div>
-              <h2 className="mt-4 font-serif text-2xl">{g.title}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{g.text}</p>
-              {g.accent && fresh && <p className="mt-4 text-sm font-medium text-accent">Start here</p>}
+              <h2 className="mt-4 font-serif text-2xl fit:mt-[min(1rem,1.5vh)] fit:text-xl">{g.title}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground fit:mt-1 fit:leading-snug">{g.text}</p>
+              {g.accent && fresh && <p className="mt-4 text-sm font-medium text-accent fit:mt-1 fit:short:hidden">Start here</p>}
             </Link>
           </li>
         ))}
       </ul>
 
-      <p className="mt-12 text-right text-xs">
+      <p className="mt-12 text-right text-xs fit:mt-2">
         <a href={PHOTO_CREDIT.href} target="_blank" rel="noreferrer" className="text-muted-foreground underline underline-offset-4 hover:text-accent">
           Photo credits
         </a>
