@@ -77,10 +77,6 @@ export default function ModeScreen() {
           ))}
         </div>
       </div>
-
-      <p className="shrink-0 text-center text-xs text-muted-foreground">
-        Your camera is used only while you practise. Single-hand mudras are recognised on your device.
-      </p>
     </main>
   )
 }

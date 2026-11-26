@@ -82,8 +82,10 @@ export default function Hub() {
         ))}
       </ul>
 
-      <p className="mt-12 text-xs leading-relaxed text-muted-foreground">
-        {PHOTO_CREDIT.text} · <Link href="/play/check" className="underline underline-offset-4 hover:text-accent">Mode check</Link>
+      <p className="mt-12 text-right text-xs">
+        <a href={PHOTO_CREDIT.href} target="_blank" rel="noreferrer" className="text-muted-foreground underline underline-offset-4 hover:text-accent">
+          Photo credits
+        </a>
       </p>
     </main>
   )
