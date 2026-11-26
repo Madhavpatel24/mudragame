@@ -44,7 +44,7 @@ export function CameraPanel({
         )}
         {overlay && <div className="pointer-events-none absolute inset-x-0 bottom-0 p-4">{overlay}</div>}
       </div>
-      <div className={cn("flex flex-wrap items-center gap-3", fill ? "mt-2" : "mt-3")}>
+      <div className={cn("flex flex-wrap items-center justify-center gap-3", fill ? "mt-2" : "mt-3")}>
         {cam.status === "on" ? (
           <Button variant="ghost" size={fill ? "sm" : "md"} onClick={cam.stop}>
             <Square className="h-4 w-4" aria-hidden /> Stop camera
