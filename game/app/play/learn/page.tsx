@@ -22,6 +22,7 @@ export default function Learn() {
   const [hold, setHold] = useState(0)
   const [flash, setFlash] = useState<{ score: number; stars: 0 | 1 | 2 | 3 } | null>(null)
   const startedFor = useRef(false)
+  const names = useRef<HTMLElement>(null)
 
   // Open on the first mudra that is not yet ready.
   useEffect(() => {
@@ -60,6 +61,13 @@ export default function Learn() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mudra?.id, info?.id])
 
+  // Keep the chosen mudra visible in the row of names. Only that row scrolls, never the page.
+  useEffect(() => {
+    const row = names.current
+    const chip = row?.querySelector<HTMLElement>('[aria-current="true"]')
+    if (row && chip) row.scrollTo({ left: chip.offsetLeft - (row.clientWidth - chip.offsetWidth) / 2 })
+  }, [mudra?.id, ready])
+
   if (!info || !ready || !mudra) return null
 
   const m = mastery(progress.practice[mudra.id] ?? [])
@@ -67,12 +75,10 @@ export default function Learn() {
   const lookalikes = mudra.lookalikes.map((l) => mudras.find((x) => x.id === l.id)).filter((x): x is NonNullable<typeof x> => !!x).slice(0, 2)
   const index = mudras.findIndex((x) => x.id === mudra.id)
   const go = (id: string) => setSelected(id)
-  // keep the selected mudra visible in the single row of names
-  const showChip = (el: HTMLButtonElement | null) => el?.scrollIntoView({ block: "nearest", inline: "nearest" })
 
   const reference = (
-    <section className={cn("flex min-h-0 flex-col gap-2", photoLeft ? "md:order-1" : "md:order-2")} aria-label="Reference">
-      <div className="relative min-h-0 flex-1">
+    <section className={cn("flex flex-col gap-2 fit:min-h-0", photoLeft ? "md:order-1" : "md:order-2")} aria-label="Reference">
+      <div className="relative aspect-[4/3] fit:aspect-auto fit:min-h-0 fit:flex-1">
         <MudraPhoto mudra={mudra} className="absolute inset-0" />
       </div>
       <div className="flex items-center justify-between gap-3">
@@ -96,12 +102,12 @@ export default function Learn() {
   )
 
   const camera = (
-    <section className={cn("flex min-h-0 flex-col", photoLeft ? "md:order-2" : "md:order-1")} aria-label="Your camera">
+    <section className={cn("flex flex-col fit:min-h-0", photoLeft ? "md:order-2" : "md:order-1")} aria-label="Your camera">
       <CameraPanel
         cam={cam}
         handsNeeded={info.handsNeeded}
         fill
-        className="flex-1"
+        className="fit:flex-1"
         overlay={hold > 0 ? <Meter value={hold} label="Hold it…" tone="green" /> : undefined}
         aside={
           <div className="min-w-40 flex-1">
@@ -122,9 +128,10 @@ export default function Learn() {
     </section>
   )
 
-  // Everything fits on one screen: the picture and the camera share whatever height is left over.
+  // On a laptop everything fits on one screen: the picture and the camera share the height that is left.
+  // On a phone they keep their full size and the page scrolls.
   return (
-    <main className="mx-auto flex h-dvh max-w-6xl flex-col gap-2 overflow-hidden px-4 py-3 md:gap-3 md:px-6 md:py-4">
+    <main className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 fit:h-dvh fit:overflow-hidden md:px-6 md:py-4">
       <header className="flex shrink-0 items-center gap-3">
         <button type="button" onClick={() => router.push("/play")} className="inline-flex shrink-0 items-center gap-1.5 text-sm text-muted-foreground transition hover:text-accent">
           <ArrowLeft className="h-4 w-4" aria-hidden /> <span className="sr-only sm:not-sr-only">Back to games</span>
@@ -140,13 +147,12 @@ export default function Learn() {
         </Button>
       </header>
 
-      <nav aria-label="Choose a mudra" className="flex shrink-0 gap-2 overflow-x-auto [scrollbar-width:none]">
+      <nav ref={names} aria-label="Choose a mudra" className="relative flex shrink-0 gap-2 overflow-x-auto [scrollbar-width:none]">
         {mudras.map((x) => {
           const mx = mastery(progress.practice[x.id] ?? [])
           return (
             <button
               key={x.id}
-              ref={x.id === mudra.id ? showChip : undefined}
               type="button"
               onClick={() => go(x.id)}
               aria-current={x.id === mudra.id}
@@ -163,7 +169,7 @@ export default function Learn() {
         })}
       </nav>
 
-      <div className="grid min-h-0 flex-1 grid-rows-2 gap-3 md:grid-cols-2 md:grid-rows-1 md:gap-6">
+      <div className="grid grid-cols-1 gap-5 fit:min-h-0 fit:flex-1 md:grid-cols-2 md:gap-6">
         {reference}
         {camera}
       </div>

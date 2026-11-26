@@ -18,7 +18,7 @@ export function CameraPanel({
   handsNeeded: 1 | 2
   overlay?: ReactNode
   className?: string
-  /** Take all the height of the parent instead of keeping a 4:3 shape. */
+  /** On large screens, take all the height of the parent instead of keeping a 4:3 shape. */
   fill?: boolean
   /** Shown beside the start button. */
   aside?: ReactNode
@@ -34,8 +34,8 @@ export function CameraPanel({
           : null
 
   return (
-    <div className={cn(fill && "flex min-h-0 flex-col", className)}>
-      <div className={cn("relative overflow-hidden rounded-3xl border border-border bg-[#1a120a]", fill ? "min-h-0 flex-1" : "aspect-[4/3]")}>
+    <div className={cn(fill && "flex flex-col fit:min-h-0", className)}>
+      <div className={cn("relative overflow-hidden rounded-3xl border border-border bg-[#1a120a]", fill ? "aspect-[4/3] fit:aspect-auto fit:min-h-0 fit:flex-1" : "aspect-[4/3]")}>
         <video ref={cam.attach} muted playsInline className={cn("h-full w-full -scale-x-100 object-cover", fill && "absolute inset-0", cam.status !== "on" && "invisible")} />
         {cam.status !== "on" && (
           <div className="absolute inset-0 grid place-items-center p-6 text-center text-sm text-[#e8d4b8]">

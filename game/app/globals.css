@@ -3,6 +3,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* screens big enough to show a whole practice page without scrolling */
+@custom-variant fit (@media (min-width: 768px) and (min-height: 500px));
+
 :root {
   /* MudraNet Palette: cream, brown, saffron/gold, terracotta */
   --background: #fff8e1; /* Cream base */
