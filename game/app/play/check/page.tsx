@@ -116,7 +116,7 @@ export default function PlayScreen() {
             )}
           </div>
 
-          <div className="mt-5 flex flex-wrap items-center gap-3">
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
             {camera === "off" ? (
               <button
                 type="button"
